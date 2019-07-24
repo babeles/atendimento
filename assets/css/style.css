@@ -1,0 +1,63 @@
+body {
+    background-color: #6699CC;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+div#page-login {
+    background-color: #fff;
+    width: 420px;
+    margin: 100px auto 0 auto;
+    border-radius: 10px;
+    border: 3px solid #888888;
+}
+
+div#page-login h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+div#page-login input {
+    width: 100%;
+    
+}
+
+div.form-group {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.logo-marca {
+    margin-top: 20px;
+}
+
+/* comentado dia 24/07/2019 Botão de acessar tela de Login
+#btnAcessar {
+    background: #fbce9b;
+    background: #FF7E00;
+    background: #a3b7b9;
+}
+
+#btnAcessar:hover {
+    background: #FF7E00;
+    background: #fbce9b;
+}*/
+
+#container-topo {
+    margin-top: 10px;
+    height: 60px;
+}
+
+#img-topo {
+    height: 60px;
+}
+
+.text-topo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffcc;
+    height: 60px;
+    text-align: center;
+}
