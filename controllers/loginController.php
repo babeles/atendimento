@@ -2,8 +2,8 @@
 class loginController extends controller {
 
     public function index() {
-        $dados = array();
-        $this->loadTemplate('login', $dados);
+        $viewData = array();
+        $this->loadTemplate('login', $viewData);
     }
-
+    
 }

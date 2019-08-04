@@ -2,8 +2,11 @@
 class atendimentosController extends controller {
 
     public function index() {
-        $dados = array();
-        $this->loadTemplate('atendimentos', $dados);
+        $usuario = new Usuario();
+        
+        $viewData['usuario'] = $usuario->getUsuario();
+        
+        $this->loadTemplate('atendimentos', $viewData);
     }
 
 }

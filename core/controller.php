@@ -7,7 +7,12 @@ class controller {
 	}
 
 	public function loadTemplate($viewName, $viewData = array()) {
-		require 'views/template.php';
+                extract($viewData);
+                if($viewName == 'login') {
+                    require 'views/login.php';
+                } else {
+                    require 'views/template.php';
+                }	
 	}
 
 	public function loadViewInTemplate($viewName, $viewData = array()) {

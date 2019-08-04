@@ -1,0 +1,33 @@
+body {
+    background-color: #6699CC;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+div#page-login {
+    background-color: #fff;
+    width: 420px;
+    margin: 100px auto 0 auto;
+    border-radius: 10px;
+    border: 3px solid #888888;
+}
+
+div#page-login h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+div#page-login input {
+    width: 100%;
+    
+}
+
+div.form-group {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.logo-marca {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
