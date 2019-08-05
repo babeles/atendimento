@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Ago-2019 às 00:13
+-- Tempo de geração: 05-Ago-2019 às 21:36
 -- Versão do servidor: 10.3.16-MariaDB
--- versão do PHP: 7.3.6
+-- versão do PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `atendimento`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `atendimento`
+--
+
+CREATE TABLE `atendimento` (
+  `atd_iduni` int(11) NOT NULL,
+  `atd_dt` date NOT NULL,
+  `atd_hrini` time NOT NULL,
+  `atd_hrfin` time NOT NULL,
+  `atd_iduni_cli` int(11) NOT NULL,
+  `atd_dcpbl` text NOT NULL,
+  `atd_dcslc` text NOT NULL,
+  `atd_dcpdc` text NOT NULL,
+  `atd_iduni_tel` int(11) NOT NULL,
+  `atd_dckm` int(11) NOT NULL,
+  `atd_dcvcl` varchar(100) NOT NULL,
+  `atd_dtslc` date NOT NULL,
+  `atd_iduni_pgd` int(11) NOT NULL,
+  `atd_iduni_tip` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -435,6 +458,12 @@ INSERT INTO `usuario` (`usu_iduni`, `usu_nm`, `usu_dcsnh`) VALUES
 --
 
 --
+-- Índices para tabela `atendimento`
+--
+ALTER TABLE `atendimento`
+  ADD PRIMARY KEY (`atd_iduni`);
+
+--
 -- Índices para tabela `cliente`
 --
 ALTER TABLE `cliente`
@@ -467,6 +496,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `atendimento`
+--
+ALTER TABLE `atendimento`
+  MODIFY `atd_iduni` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`

@@ -1,4 +1,8 @@
-<form id="form-novo-atd" method="POST">
+<?PHP 
+//echo '<pre>';
+//print_r($_GET);
+?>
+<form id="form-novo-atd" method="GET">
     <div class="row">
         <div class="col-4">
             <div class="form-group">
@@ -10,14 +14,14 @@
         <div class="col-4">
             <div class="form-group">
                 <label for="atd_hrini"><strong>Horário Inicial</strong></label>
-                <input class="form-control" type="time" name="atd_hrini" id="atd_hrini" value="<?=date("H:i");?>"/>
+                <input class="form-control" type="time" name="atd_hrini" id="atd_hrini" value="<?=date("H:i");?>" required/>
             </div>
         </div>
 
         <div class="col-4">
             <div class="form-group">
                 <label for="atd_hrfin"><strong>Horário Final</strong></label>
-                <input class="form-control" type="atd_hrfin" name="atd_hrfin" id="atd_dt" value="<?=date("H:i");?>"/>
+                <input class="form-control" type="time" name="atd_hrfin" id="atd_dt" value="<?=date("H:i");?>" required/>
             </div>
         </div>
     </div><!--//.Row-->
@@ -26,7 +30,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="atd_iduni_cli"><strong>Cliente</strong></label>
-                <select class="form-control">
+                <select class="form-control" name="atd_iduni_cli" id="atd_iduni_cli"  required>
                     <option value=""></option>
                 <?php foreach ($cliente as $rowCliente): ?>
                     <option value="<?=$rowCliente['cli_iduni']?>"><?= utf8_encode($rowCliente['cli_nm'])?></option>
@@ -41,7 +45,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="atd_dcpbl"><strong>Problema / Assunto</strong></label>
-                <textarea class="form-control" name="atd_dcpbl" id="atd_dcpbl"></textarea>
+                <textarea class="form-control" name="atd_dcpbl" id="atd_dcpbl"  required></textarea>
             </div>
         </div>
     </div><!--//.Row-->
@@ -51,7 +55,7 @@
         <div class="col-12">
             <div class="form-group">
                 <label for="atd_dcslc"><strong>Solução</strong></label>
-                <textarea class="form-control" name="atd_dcslc" id="atd_dcslc"></textarea>
+                <textarea class="form-control" name="atd_dcslc" id="atd_dcslc"  required></textarea>
             </div>
         </div>
     </div><!--//.Row-->
@@ -83,14 +87,14 @@
         <div class="col-2">
             <div class="form-group">
                 <label for="atd_dckm"><strong>KM</strong></label>
-                <input class="form-control" type="number" class="form-control" value="0"/>
+                <input class="form-control" type="number" name="atd_dckm" id="atd_dckm" value="0"/>
             </div>
         </div>
         
         <div class="col-3">
             <div class="form-group">
                 <label for="atd_dcvcl"><strong>Veículo</strong></label>
-                <select class="form-control">
+                <select class="form-control" name="atd_dcvcl" id="atd_dcvcl">
                     <option value="">###NENHUM###</option>
                     <option value="CELTA-BRANCO">CELTA-BRANCO</option>	  		  		  		  
                     <option value="MONTANA">MONTANA</option>		  
@@ -136,7 +140,7 @@
         <div class="col-4">
             <div class="form-group">
                 <label for=""></label>
-                <input class="btn btn-secondary btn-lg btn-block" type="submit" value="Salvar"/>
+                <input class="btn btn-secondary btn-lg btn-block btnSalvar" type="submit" value="Salvar"/>
              </div>
         </div>
     </div><!--//.Row-->
