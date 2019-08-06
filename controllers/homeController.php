@@ -14,7 +14,12 @@ class homeController extends controller {
         $viewData['programador'] = $programador->todosProgramador();
         $viewData['tipo'] = $tipo->todosTipo();
         
-        $this->loadTemplate('home', $viewData);
+        if(isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])) {
+            $this->loadTemplate('home', $viewData);
+        } else {
+            header("Location: ".BASE_URL."login");
+        }
+        
     }
 
 }

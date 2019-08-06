@@ -12,32 +12,32 @@
     <body>
         
         <!--Container-->
-        <div id="container">
+        <div id="container">                         
             <!--Menu-->
-            <div id="menu">
-<!--                <div id="menu-header">
-                    <div id="texto-usuario">
-                        Olá <?=$usu_nm?>
-                    </div>
-                    <div id="texto-bemvindo">
-                    </div>  
-                </div>  -->
-                
-                <!--Lista Menu-->
-                <div id="lista-menu">
-                    <ul>
-                        <a href="<?=BASE_URL;?>"><li>Novo Atendimento</li></a>
-                        <a href="<?=BASE_URL;?>atendimentos"><li>Atendimentos</li></a>
-                        <a href="<?=BASE_URL;?>pendencia"><li>Pendência</li></a>
-                        <a href="<?=BASE_URL;?>demandas"><li>Demandas</li></a>
-                        <a href="<?=BASE_URL;?>repositorio-Relatorios"><li>Repositório de Relatórios</li></a>
-                        <a href="<?=BASE_URL;?>enviar-email-cliente"><li>Envio de E-mail a Clientes</li></a>
-                        <a href="<?=BASE_URL;?>suporte-documentos"><li>Suporte/Documentos</li></a>
-                        <a href="<?=BASE_URL;?>agenda"><li>Agenda</li></a>
-                        <a href="<?=BASE_URL;?>agenda"><li>Logout</li></a>
-                    </ul>
-                </div><!--//.Lista Menu-->
-            </div><!--//.Menu-->
+                <div id="menu">
+    <!--                <div id="menu-header">
+                        <div id="texto-usuario">
+                            Olá <?=$usu_nm?>
+                        </div>
+                        <div id="texto-bemvindo">
+                        </div>  
+                    </div>  -->
+
+                    <!--Lista Menu-->
+                    <div id="lista-menu">
+                        <ul>
+                            <a href="<?=BASE_URL;?>"><li>Novo Atendimento</li></a>
+                            <a href="<?=BASE_URL;?>atendimentos"><li>Atendimentos</li></a>
+                            <a href="<?=BASE_URL;?>pendencia"><li>Pendência</li></a>
+                            <a href="<?=BASE_URL;?>demandas"><li>Demandas</li></a>
+                            <a href="<?=BASE_URL;?>repositorioRelatorios"><li>Repositório de Relatórios</li></a>
+                            <a href="<?=BASE_URL;?>enviarEmailClientes"><li>Envio de E-mail a Clientes</li></a>
+                            <a href="<?=BASE_URL;?>suporteDocumentos"><li>Suporte/Documentos</li></a>
+                            <a href="<?=BASE_URL;?>agenda"><li>Agenda</li></a>
+                            <a href="<?=BASE_URL;?>login/logout"><li>Logout</li></a>
+                        </ul>
+                    </div><!--//.Lista Menu-->
+                </div><!--//.Menu-->
             
             <!--Formularios-->
             <div class="container-fluid">
@@ -51,13 +51,14 @@
                                 Olá <?=ucfirst($usuario['usu_nm']);?>, Bem vindo ao Gerenciador de Atendimento do Gransystem!
                             </div>
                             <div id="info-data">
-                                <?= date("d/m/Y H:i:s");?>
+                                <?= date("d/m/Y \à\s H:i:s");?>
                             </div>
                         </div>
                     </div><!--//.header-formulario-->
                     <?=$this->loadViewInTemplate($viewName, $viewData);?>
+                    
                 </div><!--//.Formularios-->
-            </div>
+            </div><!--//.container-fluid-->
             
         </div><!--//.Container-->
         

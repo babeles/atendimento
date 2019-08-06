@@ -6,7 +6,12 @@ class atendimentosController extends controller {
         
         $viewData['usuario'] = $usuario->getUsuario();
         
-        $this->loadTemplate('atendimentos', $viewData);
+        if(isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])) {
+            $this->loadTemplate('atendimentos', $viewData);
+        } else {
+            header("Location: ".BASE_URL."login");
+        }
+        
     }
 
 }

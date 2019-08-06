@@ -1,5 +1,5 @@
 <?php
-class pendenciaController extends controller {
+class suporteDocumentosController extends controller {
 
     public function index() {
         $usuario = new Usuario();
@@ -7,11 +7,11 @@ class pendenciaController extends controller {
         $viewData['usuario'] = $usuario->getUsuario();
         
         if(isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])) {
-            $this->loadTemplate('pendencia', $viewData);
+            $this->loadTemplate('suporte-documentos', $viewData);
         } else {
             header("Location: ".BASE_URL."login");
         }
-         
+        
     }
 
 }

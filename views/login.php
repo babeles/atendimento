@@ -19,7 +19,7 @@
                             <a href="http://gransystem.com.br" target="_blank"><img class="img-responsive" src="<?=BASE_URL?>assets/images/logo/logo.png" alt="http://gransystem.com.br" title="http://gransystem.com.br"/></a> 
                         </div>
                         
-                        <form method="POST">
+                        <form method="POST" action="<?=BASE_URL;?>login/acessar">
                             <div class="form-group form-group-lg">
                                 <div class="input-group">
                                     <span class="input-group-addon">
@@ -35,7 +35,7 @@
                                 </div> 
                             </div>
                             <div class="form-group text-center">
-                                <button id="btnAcessar" type="submit" class="btn btn-info btn-lg btn-block">ACESSAR</button>
+                                <button id="btnAcessar" type="submit" class="btn btn-info btn-lg btn-block btnAcessar">ACESSAR</button>
                             </div>
                         </form>
                     </div>  

@@ -3,7 +3,7 @@ Class Usuario extends model {
     
     public function getUsuario() {
         $sql = $this->db->prepare("SELECT * FROM usuario WHERE usu_iduni = :usu_iduni");
-        $sql->bindValue(":usu_iduni", 1);
+        $sql->bindValue(":usu_iduni", $_SESSION['cLogin']);
         $sql->execute();
         
         if($sql->RowCount() > 0 ) {
@@ -14,8 +14,7 @@ Class Usuario extends model {
     }
     
     public function loginUsuario($usu_nm, $usu_dcsnh) {
-        global $pdo;
-        $sql = $pdo->prepare("SELECT * FROM usuario WHERE usu_nm = :usu_nm AND usu_dcsnh = :usu_dcsnh");
+        $sql = $this->db->prepare("SELECT * FROM usuario WHERE usu_nm = :usu_nm AND usu_dcsnh = :usu_dcsnh");
         $sql->bindValue(":usu_nm", $usu_nm);
         $sql->bindValue(":usu_dcsnh", md5($usu_dcsnh));
         $sql->execute();
